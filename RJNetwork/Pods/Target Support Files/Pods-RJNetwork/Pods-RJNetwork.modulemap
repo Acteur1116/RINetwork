@@ -1,0 +1,6 @@
+framework module Pods_RJNetwork {
+  umbrella header "Pods-RJNetwork-umbrella.h"
+
+  export *
+  module * { export * }
+}

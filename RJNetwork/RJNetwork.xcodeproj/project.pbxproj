@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		278D5860D6406D9B9009ADEF /* Pods_RJNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDF1766E1E518170A19624E8 /* Pods_RJNetwork.framework */; };
 		636F85F62508BA13000E6CDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 636F85F52508BA13000E6CDA /* AppDelegate.m */; };
 		636F85F92508BA13000E6CDA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 636F85F82508BA13000E6CDA /* SceneDelegate.m */; };
 		636F85FC2508BA13000E6CDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636F85FB2508BA13000E6CDA /* ViewController.m */; };
@@ -29,6 +30,9 @@
 		636F86032508BA13000E6CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		636F86052508BA13000E6CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		636F86062508BA13000E6CDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B7EA6C293BF68C3B36F16939 /* Pods-RJNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJNetwork.debug.xcconfig"; path = "Target Support Files/Pods-RJNetwork/Pods-RJNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		CC5E959C25449AFC07396E83 /* Pods-RJNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RJNetwork.release.xcconfig"; path = "Target Support Files/Pods-RJNetwork/Pods-RJNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		FDF1766E1E518170A19624E8 /* Pods_RJNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RJNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278D5860D6406D9B9009ADEF /* Pods_RJNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +52,8 @@
 			children = (
 				636F85F32508BA13000E6CDA /* RJNetwork */,
 				636F85F22508BA13000E6CDA /* Products */,
+				8F6DDD3927C80ACA814255BC /* Pods */,
+				D36384F8B29C9EC0E6949325 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,24 @@
 			path = RJNetwork;
 			sourceTree = "<group>";
 		};
+		8F6DDD3927C80ACA814255BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7EA6C293BF68C3B36F16939 /* Pods-RJNetwork.debug.xcconfig */,
+				CC5E959C25449AFC07396E83 /* Pods-RJNetwork.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D36384F8B29C9EC0E6949325 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDF1766E1E518170A19624E8 /* Pods_RJNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 636F860A2508BA13000E6CDA /* Build configuration list for PBXNativeTarget "RJNetwork" */;
 			buildPhases = (
+				D3A3622DFEC85151681B4CD6 /* [CP] Check Pods Manifest.lock */,
 				636F85ED2508BA13000E6CDA /* Sources */,
 				636F85EE2508BA13000E6CDA /* Frameworks */,
 				636F85EF2508BA13000E6CDA /* Resources */,
+				ED99C826BEB0047E2F3D34F5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D3A3622DFEC85151681B4CD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RJNetwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED99C826BEB0047E2F3D34F5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RJNetwork/Pods-RJNetwork-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RJNetwork/Pods-RJNetwork-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RJNetwork/Pods-RJNetwork-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		636F85ED2508BA13000E6CDA /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		636F860B2508BA13000E6CDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7EA6C293BF68C3B36F16939 /* Pods-RJNetwork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +374,7 @@
 		};
 		636F860C2508BA13000E6CDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC5E959C25449AFC07396E83 /* Pods-RJNetwork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
